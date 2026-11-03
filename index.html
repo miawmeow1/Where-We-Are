@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎵 Lyrics - When We Are 🎵</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <body>
+        <div id="root"></div>
+        <script type="module" src="main.tsx"></script>
+    </body>
+    <style>
+        @import "tailwindcss";
+        body {
+            /* Warna latar langit terang (Pastel Pink & Light Lavender) */
+            background: linear-gradient(to bottom, #f5d6eb, #e2bbf0, #9f8bc6);
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Ambient Glow & Pixel Effects */
+        .glow-text {
+            text-shadow: 0 0 10px rgba(255, 235, 245, 0.9), 0 0 15px rgba(233, 69, 96, 0.4);
+        }
+
+        .keep-spaces {
+            white-space: pre-wrap;
+        }
+
+        /* Animasi Awan Pixel Terang Bergerak */
+        .pixel-cloud {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.65);
+            box-shadow: 
+                20px 0 0 0 rgba(255, 255, 255, 0.65),
+                -20px 0 0 0 rgba(255, 255, 255, 0.65),
+                0 -20px 0 0 rgba(255, 255, 255, 0.65),
+                0 20px 0 0 rgba(255, 255, 255, 0.65);
+            border-radius: 4px;
+            animation: moveClouds linear infinite;
+        }
+
+        @keyframes moveClouds {
+            from { transform: translateX(-150px); }
+            to { transform: translateX(100vw); }
+        }
+
+        /* Animasi Perahu Pixel Melambung */
+        .pixel-boat {
+            animation: floatBoat 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatBoat {
+            0% { transform: translateY(0px) rotate(0deg); }
+            100% { transform: translateY(-6px) rotate(2deg); }
+        }
+
+        /* Jendela Pop-up Retro Terang & Kontras (Light Pixel Window Frame) */
+        .pixel-window {
+            border: 4px solid #5a3866;
+            box-shadow: 
+                8px 8px 0px 0px rgba(58, 29, 69, 0.4),
+                inset -4px -4px 0px 0px #ab82b9,
+                inset 4px 4px 0px 0px #ffffff;
+            background-color: rgba(255, 245, 252, 0.95);
+        }
+
+        .pixel-btn {
+            border: 2px solid #4a1f3d;
+            box-shadow: 
+                3px 3px 0px 0px #2a0c20,
+                inset -2px -2px 0px 0px #b83256,
+                inset 2px 2px 0px 0px #ff9eb5;
+            background-color: #e94560;
+            image-rendering: pixelated;
+        }
+
+        .pixel-btn:hover {
+            background-color: #ff5975;
+            transform: translate(-1px, -1px);
+            box-shadow: 4px 4px 0px 0px #2a0c20;
+        }
+
+        .pixel-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px 0px #2a0c20;
+        }
+    </style>
+</head>
+<body class="relative flex items-center justify-center h-screen overflow-hidden select-none">
+
+    <body class="bg-[#1a1a2e] text-white overflow-hidden m-0">
+        <div id="root"></div>
+        <!-- Entry point React -->
+        <script type="module" src="/src/main.tsx"></script>
+    </body>
+
+    <!-- SCENE BACKGROUND TERANG (Kastil, Jembatan, Danau, & Awan) -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        
+        <!-- Awan Pixel Putih Cerah Bergerak -->
+        <div class="pixel-cloud top-10 w-36 h-9" style="animation-duration: 40s; animation-delay: -3s;"></div>
+        <div class="pixel-cloud top-20 w-52 h-12" style="animation-duration: 60s; animation-delay: -18s;"></div>
+        <div class="pixel-cloud top-6 w-28 h-7" style="animation-duration: 30s; animation-delay: -10s;"></div>
+
+        <!-- Bulan / Planet Cerah di Langit -->
+        <div class="absolute top-8 right-1/4 w-32 h-32 rounded-full bg-[#ffffff]/40 blur-xs border-2 border-white/60"></div>
+
+        <!-- Silhouette Kastil & Jembatan dengan Warna Terang/Jelas -->
+        <div class="absolute bottom-28 w-full flex justify-between items-end px-8">
+            <!-- Jembatan Pixel Kiri -->
+            <svg width="260" height="70" viewBox="0 0 120 30" shape-rendering="crispEdges">
+                <path d="M0,25 h120 v5 h-120 z M10,15 h10 v10 h-10 z M30,15 h10 v10 h-10 z M50,15 h10 v10 h-10 z M70,15 h10 v10 h-10 z M90,15 h10 v10 h-10 z" fill="#6d487b"/>
+            </svg>
+
+            <!-- Kastil Pixel Kanan (Cerah & Kontras) -->
+            <svg width="320" height="240" viewBox="0 0 150 110" shape-rendering="crispEdges">
+                <!-- Benteng Utama -->
+                <path d="M40,30 h30 v80 h-30 z M85,10 h25 v100 h-25 z M120,40 h25 v70 h-25 z" fill="#7a528a"/>
+                <!-- Atap Kerucut Menara -->
+                <path d="M97,0 L80,10 H115 Z M55,20 L35,30 H75 Z M132,30 L115,40 H150 Z" fill="#4d2b5c"/>
+                <!-- Jendela Bercahaya Terang -->
+                <rect x="94" y="25" width="6" height="10" fill="#fff3a1"/>
+                <rect x="94" y="45" width="6" height="10" fill="#fff3a1"/>
+                <rect x="52" y="45" width="6" height="8" fill="#fff3a1"/>
+            </svg>
+        </div>
+
+        <!-- Danau & Pantulan Air Terang (Bawah) -->
+        <div class="absolute bottom-0 w-full h-32 bg-gradient-to-b from-[#6e4e8a] to-[#432b57] border-t-2 border-[#bfa2d6]">
+            <!-- Perahu Cokelat Jelas Melambung -->
+            <div class="absolute top-4 left-1/3 pixel-boat">
+                <svg width="54" height="22" viewBox="0 0 24 10" shape-rendering="crispEdges">
+                    <path d="M2,3 h20 l-3,6 h-14 z" fill="#8c5338"/>
+                    <path d="M0,3 h24 v1 h-24 z" fill="#5e3420"/>
+                    <rect x="10" y="0" width="1" height="8" fill="#ffd0a1" transform="rotate(25 10 0)"/>
+                </svg>
+            </div>
+            <!-- Riak Cahaya Air -->
+            <div class="w-full h-full opacity-40 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_8px]"></div>
+        </div>
+    </div>
+
+    <!-- JENDELA POP-UP LIGHT RETRO PIXEL (LYRICS WINDOW) -->
+    <div class="relative z-10 pixel-window rounded-none p-4 max-w-lg w-full mx-4 text-center">
+        
+        <!-- Header Window Light Style -->
+        <div class="bg-[#7a528a] border-b-2 border-[#5a3866] -mx-4 -mt-4 p-2 mb-6 flex justify-between items-center px-4">
+            <div class="flex items-center gap-2">
+                <span class="text-xs">🎵</span>
+                <span class="text-xs font-bold tracking-wider text-white">LYRICS_PLAYER.EXE</span>
+            </div>
+            <div class="flex gap-1">
+                <button class="w-4 h-4 bg-[#e94560] text-[9px] font-bold text-white leading-none border border-[#3b1c31]">X</button>
+            </div>
+        </div>
+
+        <!-- Dekorasi Bunga & Sparkle -->
+        <div id="flower-decoration" class="text-lg mb-4 flex items-center justify-center gap-3 min-h-[2rem]">
+            <span id="flower-left">🌸</span>
+            <span id="flower-line" class="text-xs tracking-widest text-[#7a488a] keep-spaces">🌿 🌺 🌻 🌷 🌼</span>
+            <span id="flower-right">💐</span>
+        </div>
+
+        <!-- Box Display Teks Lirik (Latar Belakang Terang dengan Teks Pink Tua Tegas) -->
+        <div class="min-h-[4.5rem] flex items-center justify-center py-2 px-4 bg-[#fff0f6] border-2 border-[#9e6fa8] rounded">
+            <h1 id="lyric-text" class="text-xl md:text-2xl font-extrabold text-[#d62846] glow-text transition-all duration-300 keep-spaces">
+✨ Click Start to Begin ✨
+            </h1>
+        </div>
+
+        <!-- Border Gelembung Bawah -->
+        <div id="bottom-border" class="text-[11px] text-[#6b3e7a] tracking-widest min-h-[1.5rem] mt-4 opacity-90 keep-spaces font-bold"></div>
+
+        <!-- Tombol Start -->
+        <div class="mt-6 mb-2">
+            <button id="start-btn" onclick="startSong()" class="pixel-btn text-white font-bold py-2 px-6 text-sm tracking-wider cursor-pointer transition">
+                ▶ START SONG
+            </button>
+        </div>
+    </div>
+
+    <!-- Elemen Audio untuk Musik Latar -->
+    <audio id="my-song" src="Where We Are (Lyrics) - One Direction [Unreleased].mp3" preload="auto"></audio>
+
+    <script>
+        const FLOWERS = ['🌸', '🌺', '🌹', '🌻', '🌷', '🌼', '💐', '🌿'];
+        const BUBBLES = ['○', '◌', '◍', '●', '◉', '〇', '⋆'];
+        const SPARKLES = ['✨', '🌟', '💫', '⭐'];
+
+        const lyricsData = [
+            { text: "Did we ever know?", delay: 300, speed: 70 },
+            { text: "Did we ever know?", delay: 2400, speed: 70 },
+            { text: "Did we ever know?", delay: 4100, speed: 120 },
+            { text: "Is it all inside of my head?", delay: 8000, speed: 80 },
+            { text: "Maybe you still think I don't care", delay: 11900, speed: 70 },
+            { text: "But all I need is you", delay: 15900, speed: 80 },
+            { text: "Yeah, you know it's true", delay: 18500, speed: 50 },
+            { text: "yeah, you know it's true", delay: 20500, speed: 50 },
+            { text: "Forget about where we are and let go", delay: 22700, speed: 110 },
+            { text: "We're so close", delay: 28000, speed: 90 },
+            { text: "If you don't know", delay: 32000, speed: 80 },
+            { text: "Just hold on", delay: 35000, speed: 60 },
+            { text: "and don't run, no", delay: 38500, speed: 70 },
+            { text: "We're looking back,", delay: 42000, speed: 70 },
+            { text: "we messed around", delay: 45000, speed: 70 }
+        ];
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function typeWriter(text, speed) {
+            const label = document.getElementById('lyric-text');
+            label.textContent = ""; 
+            for (let i = 0; i < text.length; i++) {
+                label.textContent += text[i];
+                await sleep(speed);
+            }
+        }
+
+        function updateBorders(text) {
+            let topBubbles = [];
+            let count = Math.min(text.length, 14);
+            for (let i = 0; i < count; i++) {
+                topBubbles.push(Math.random() < 0.3 ? SPARKLES[Math.floor(Math.random() * SPARKLES.length)] : BUBBLES[Math.floor(Math.random() * BUBBLES.length)]);
+            }
+            document.getElementById('bottom-border').textContent = topBubbles.join('   ');
+
+            document.getElementById('flower-left').textContent = FLOWERS[Math.floor(Math.random() * FLOWERS.length)];
+            document.getElementById('flower-right').textContent = FLOWERS[Math.floor(Math.random() * FLOWERS.length)];
+            
+            let burst = [];
+            for(let i=0; i<3; i++) burst.push(FLOWERS[Math.floor(Math.random() * FLOWERS.length)]);
+            document.getElementById('flower-line').textContent = burst.join('   ');
+        }
+
+        async function startSong() {
+            const btn = document.getElementById('start-btn');
+            btn.style.display = 'none';
+
+            // Memulai musik
+            const audio = document.getElementById('my-song');
+            audio.currentTime = 0;
+            audio.play().catch(error => {
+                console.log("Gagal memutar audio:", error);
+            });
+
+            for (let i = 0; i < lyricsData.length; i++) {
+                const item = lyricsData[i];
+                const prevDelay = i === 0 ? 0 : lyricsData[i - 1].delay;
+                const currentWait = item.delay - prevDelay;
+
+                await sleep(currentWait);
+                updateBorders(item.text);
+                await typeWriter(item.text, item.speed);
+            }
+
+            await sleep(2000);
+            document.getElementById('lyric-text').textContent = "✨ Song Complete! ✨";
+            document.getElementById('bottom-border').textContent = "🌟   🌟   🌟   🌟   🌟";
+            document.getElementById('flower-line').textContent = "🌸   🌺   🌹   🌻   🌷";
+        }
+    </script>
+</body>
+</html>
